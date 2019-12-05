@@ -3,6 +3,19 @@
 // PRE: arr is an already sorted array of unique integers. 
 // POST: we return the index of the desired integer in arr; otherwise, the integer is not in the array --> return -1
 
+// TIME ANALYSIS: 
+// n * (1/2)^k with n = size and k = # of iterations we perform
+// After k iterations, we know length of array becomes 1
+//          n = (n/2)^k = 1
+//          n = 2^k
+//          log(n) = log(2^k)
+//          log(n) = k*log(2)
+//          k = log2(n)
+
+// BEST: O(1)
+// WORST: O(logn)
+// AVG: O(logn)
+
 #include <iostream>
 using namespace std;
 
