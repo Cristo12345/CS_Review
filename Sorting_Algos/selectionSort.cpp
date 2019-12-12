@@ -5,6 +5,12 @@
 // Pre: arr is an array of unique integers
 // Post: return arr sorted in ascending order
 
+// TIME ANALYSIS: 
+// Two nested for loops - algorithm must run through entirety of array
+
+// BEST: O(n^2)
+// WORST: O(n^2)
+// AVG: O(n^2)
 
 #include <iostream>
 using namespace std; 
