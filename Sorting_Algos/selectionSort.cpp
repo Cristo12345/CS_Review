@@ -6,26 +6,29 @@
 // Post: return arr sorted in ascending order
 
 
-
 #include <iostream>
 using namespace std; 
 
-void selectionSort(int arr[], int size) {
+void selectionSort(int arr[], int size) 
+    {
+        int i, j, min;
 
-    for (int i = 0; i < size-1; i++) {
-        int min = i;
-        for (int j = i + 1; j < size; j++) {
-            if (arr[j] < arr[min]) {
+        for (i = 0; i < size-1; i++) {
+                
+                min = i;
 
-                // swap min and new smallest element
-                min = j;
-                int tmp = arr[min];
-                arr[min] = arr[i];
-                arr[i] = tmp;
+                for (j = i+1; j < size; j++) 
+                    {   
+                        if (arr[j] < arr[min]) {
+                            min = j;
+                        }
+                    }
+                    // perform swap AFTER inner loop, not DURING
+                    int tmp = arr[i];
+                    arr[i] = arr[min];
+                    arr[min] = tmp;
             }
-        }
     }
-}
 
 int main() {
     int myArr[] = {6, 2, 7, 11, 5, 8};
@@ -33,14 +36,15 @@ int main() {
 
     cout << "Original array is \n";
     for (int i = 0; i < size; i++) {
-        cout << myArr[i] << '\n';
+        cout << myArr[i] << ' ';
     }
+    
 
     selectionSort(myArr, size);
 
-    cout << "Sorted array is \n";
+    cout << "\nSorted array is \n";
     for (int j = 0; j < size; j++) {
-        cout << myArr[j] << '\n';
+        cout << myArr[j] << ' ';
     }
 
     return 0;
