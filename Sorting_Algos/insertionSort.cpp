@@ -11,4 +11,11 @@
 #include <iostream>
 using namespace std;
 
-void insertionSort(int arr[], )
+void insertionSort(int arr[], int n) {
+
+    // start loop at i = 0 since first element is in SORTED. Since it's only element, it is sorted.
+    for (int i = 1; i < n; i++) {
+
+
+    }
+}
