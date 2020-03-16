@@ -25,7 +25,7 @@ bool isUnique(string str) {
 
 
 // Method 2:
-// Assuming we are using ASCII chars (so 2^8 or 256 possible values),
+// Assuming we are using extended ASCII chars (so 2^8 or 256 possible values),
 // we can sort the string, then loop through it. If any element is equal to an adjacent
 // element, we have a duplicate and return false. (case sensitive)
 
@@ -47,10 +47,49 @@ bool isUnique2(string str) {
 
 
 
+// Method 3: 
+// Assuming we are using extended ASCII chars (so 2^8 or 256 possible values),
+// create an array of 256 boolean values - ach index indicating whether that char has 
+// already been found (case sensitive)
+
+bool isUnique3(string str) {
+
+    // first check duplicates by looking at length of str. If it's more than 256, we know
+    // there are repeat chars
+    if (str.length() > 256) {
+        return false;
+    }
+
+    // boolean array 
+    bool charSet[256] = { 0 };
+    for (int i = 0; i < str.length()-1; i++) {
+        
+        // store char of current iter
+        char c = str[i];
+
+        // char has been used before
+        if (charSet[c] == true) {
+            return false;
+        }
+
+        // char not found, update it's index in bool array
+        else {
+            charSet[c] = true;
+        }
+    }
+
+    return true; 
+}
+
+
+
 int main() {
     // string str = "helLo";
     // cout << isUnique(str);
 
+    // string str = "helLo";
+    // cout << isUnique2(str);
+
     string str = "helLo";
-    cout << isUnique2(str);
+    cout << isUnique3(str);
 }
