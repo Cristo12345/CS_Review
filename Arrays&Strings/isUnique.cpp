@@ -52,6 +52,8 @@ bool isUnique2(string str) {
 // create an array of 256 boolean values - ach index indicating whether that char has 
 // already been found (case sensitive)
 
+// O(n) --> O(1) + O(1) + O(n) * O(1)
+
 bool isUnique3(string str) {
 
     // first check duplicates by looking at length of str. If it's more than 256, we know
