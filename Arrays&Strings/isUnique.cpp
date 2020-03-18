@@ -94,4 +94,6 @@ int main() {
 
     string str = "helLo";
     cout << isUnique3(str);
+
+    return 0;
 }
