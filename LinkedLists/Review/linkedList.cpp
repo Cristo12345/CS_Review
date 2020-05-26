@@ -32,4 +32,29 @@ using namespace std;
 
 // we create a Linked list by creating Node structures
 
+#include <iostream>
+using namespace std;
 
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+// Insert new node to font of list (new head)
+void push(struct Node** head, int node_data) {
+    // 1. create a new node struct
+    struct Node* newNode = new Node;
+    
+    // 2. assign data to new node
+    newNode -> data = node_data;
+
+    // 3. set next of new node as head
+    newNode -> next = (*head);
+
+    // 4. move head to point to new node
+    (*head) = newNode;
+}
+
+int main () {
+
+}
