@@ -2,7 +2,13 @@
 
 using namespace std;
 
-// 4.4.1.2 currency converter excercise 
+// 4.4.1.2 currency converter excercise using SWITCH - also some rules regarding SWITCH
+
+//  1. SWITCH only works on numbers and chars - NO strings
+//  2. cannot use variables in case expressions - must be constant
+//  3. cannot use same value for different cases
+//  4. can use several case labels for a single case (ex. case 2: case 4: case 6: cout << num is even)
+//  5. end ALL cases with a 'break;'
 
 int main() {
     
