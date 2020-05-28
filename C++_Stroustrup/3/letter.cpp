@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// writing a letter to a friend w/ content based on input
 int main()
 {
     cout << "Enter names of two friends" << endl;

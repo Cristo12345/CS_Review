@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// simple input/output program
+
 int main() {
     cout << "Enter your name and age" << endl;
     string name;
