@@ -6,6 +6,7 @@ As I approach the completion of my CS undergraduate degree, I thought it would b
 For C++ programs, I am using MinGW's GCC compiler. <br>
 
 ## Resources
+<a href="https://www.stroustrup.com/programming.html">Programming -- Principles and Practice Using C++, Bjarne Stroustrup</a> <br>
 <a href="https://www.geeksforgeeks.org">GeeksforGeeks</a> <br>
 <a href="https://leetcode.com/">LeetCode</a> <br>
 <a href="https://devdocs.io/cpp/">C++ Docs</a> <br>
