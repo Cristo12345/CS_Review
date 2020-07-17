@@ -10,6 +10,10 @@ class myClass {
     public:
         int myNum;
         string myString;
+
+    // anything in private will not be accessible from outside the class
+    private:
+        string myPrivateString;
 };
 
 int main() {
@@ -17,6 +21,9 @@ int main() {
 
     myObj.myNum = 3;
     myObj.myString = "hello";
+
+    //this wont work
+    // myObj.myPrivateString = "goodbye"
 
     cout << myObj.myNum << '\n';
     cout << myObj.myString;
